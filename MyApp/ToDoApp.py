@@ -29,16 +29,16 @@ class ToDoModel:
         def add_task(self, task):
             self.model.add_task(task) # Call the model to add a task
     
-    # def delete_task(self, task_index):
-        # self.model.delete_task(task_index) # Call the model to delete a task
+    def delete_task(self, task_index):
+        self.model.delete_task(task_index) # Call the model to delete a task
     
     def display_todo_list(self):
         tasks = self.model.get_tasks() # Retrieve the list of tasks from the model
         self.view.print_todo_list(tasks) # Call the view to display the list
     
     # def sort_todo_list(self):
-        # tasks = self.model.get_tasks() # Retrieve the list of tasks from the model
-        # self.view.sort_todo_list(tasks) # Call the view to sort and display the list
+    # tasks = self.model.get_tasks() # Retrieve the list of tasks from the model
+    # self.view.sort_todo_list(tasks) # Call the view to sort and display the list
     
     def main():
         model = ToDoModel()
@@ -53,12 +53,12 @@ class ToDoModel:
         controller.display_todo_list()
 
         # Sort and display the To-Do list
-        # controller.sort_todo_list()
+         controller.sort_todo_list()
 
         # Delete a task (e.g., the second task, index 1)
-        controller.delete_task(1)
+         controller.delete_task(1)
 
         # Display the updated To-Do list after deletion
-        controller.display_todo_list()
+         controller.display_todo_list()
         if __name__ == "__main__":
             main()
