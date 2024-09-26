@@ -4,9 +4,9 @@ class ToDoModel:
         self.tasks = [] # Initialize an empty list to store tasks
     def add_task(self, task):
         self.tasks.append(task) # Add a task to the list
-        # def delete_task(self, task_index):
-        # if 0 <= task_index < len(self.tasks):
-        # del self.tasks[task_index] # Delete the task at the specified index
+    def delete_task(self, task_index):
+        if 0 <= task_index < len(self.tasks):
+            del self.tasks[task_index] # Delete the task at the specified index
     def get_tasks(self):
         return self.tasks # Return the list of tasks
     
@@ -16,9 +16,9 @@ class ToDoModel:
             for i, task in enumerate(tasks, 1):
                 print(f"{i}. {task}") # Print each task with its index
     
-    # def sort_todo_list(self, tasks):
-    # sorted_tasks = sorted(tasks) # Sort the tasks alphabetically
-    # self.print_todo_list(sorted_tasks) # Print the sorted to-do list
+        def sort_todo_list(self, tasks):
+            sorted_tasks = sorted(tasks) # Sort the tasks alphabetically
+            self.print_todo_list(sorted_tasks) # Print the sorted to-do list
     
     class ToDoController:
         def __init__(self, model, view):
